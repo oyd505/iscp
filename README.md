@@ -13,10 +13,13 @@
 * 1、使用alibaba-nacos管理服务
 * 2、使用alibaba-nacos管理配置文件
 >### [iscp-feign-sentinel项目](https://github.com/oyd505/iscp/tree/master/iscp-feign-sentinel)
-* 3、使用openfeign声明式调用下游服务
-* 4、使用alibaba-sentinel做熔断降级控制
-* 5、使用alibaba-nacos存储服务降级规则
+* 1、使用openfeign声明式调用下游服务
+* 2、使用alibaba-sentinel做熔断降级控制
+* 3、使用alibaba-nacos存储服务降级规则
 >### [iscp-gateway-sentinel项目](https://github.com/oyd505/iscp/tree/master/iscp-gateway-sentinel)
+* 1、使用spring-cloud-gateway做api网关
+* 2、使用alibaba-sentinel做限流控制
+* 3、使用alibaba-nacos存储服务限流规则
 
 ## 注意事项
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）
