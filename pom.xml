@@ -110,5 +110,6 @@
 
   <modules>
     <module>iscp-nacos</module>
+    <module>iscp-feign-sentinel</module>
   </modules>
 </project>

@@ -1,0 +1,10 @@
+[
+    {
+        "resource": "GET:http://iscp-nacos/test/sleep",
+        "limitApp": "default",
+        "count": 3,
+        "timeWindow": 120,
+        "grade": 2,
+        "passCount": 0
+    }
+]
