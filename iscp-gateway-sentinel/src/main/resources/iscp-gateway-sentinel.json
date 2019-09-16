@@ -1,0 +1,13 @@
+[
+    {
+    "resource": "iscp-nacos",
+    "resourceMode": 0,
+    "controlBehavior": 0,
+    "count": 3.0,
+    "grade": 1,
+    "intervalSec": 1,
+    "burst": 0,
+    "maxQueueingTimeoutMs": 500,
+    "paramItem": null
+    }
+]
