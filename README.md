@@ -46,7 +46,9 @@
 >> Access Token URL: http://localhost:9103/oauth/token  
 >> Client ID: client1  
 >> Client Secret: 123456
-
+* 访问资源
+>> url: http://localhost:9104/info/user  
+>> headers: Authorization:Bearer 894fc69f-6a60-4cff-b762-374db6c0e033  
 
 ## 注意事项
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）
