@@ -12,7 +12,7 @@
 >>> -javaagent:skywalking-agent.jar绝对路径 (如：C:\\apache-skywalking\\agent\\skywalking-agent.jar)  
 >>> -Dskywalking.agent.service_name=服务名字 (如：demo-consumer)  
 >>> -Dskywalking.collector.backend_service=skywalking服务地址与端口 (如：127.0.0.1:11800)  
->>>> 或  
+>>> 或  
 >>> java -javaagent:skywalking-agent.jar绝对路径（如：C:\\apache-skywalking\\agent\\skywalking-agent.jar)  
 >>>      -Dskywalking.agent.service_name=服务名字(如：demo-consumer)  
 >>>      -Dskywalking.collector.backend_service=skywalking服务地址与端口(如：127.0.0.1:11800)  
