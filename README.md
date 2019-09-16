@@ -9,9 +9,9 @@
 * 5、sentinel-dashboard使用1.6.3
 * 6、apache-skywalking-apm使用6.3.0
 >> 客户端使用（在jvm加入如下信息）
->> -javaagent:skywalking-agent.jar绝对路径（如：C:\\apache-skywalking\\agent\\skywalking-agent.jar)
->> -Dskywalking.agent.service_name=服务名字(如：demo-consumer)
->> -Dskywalking.collector.backend_service=skywalking服务地址与端口(如：127.0.0.1:11800)
+>>> -javaagent:skywalking-agent.jar绝对路径（如：C:\\apache-skywalking\\agent\\skywalking-agent.jar)
+>>> -Dskywalking.agent.service_name=服务名字(如：demo-consumer)
+>>> -Dskywalking.collector.backend_service=skywalking服务地址与端口(如：127.0.0.1:11800)
 
 ## 项目模块介绍
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)
