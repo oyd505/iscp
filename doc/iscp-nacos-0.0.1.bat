@@ -1,0 +1,2 @@
+title iscp-nacos
+java -javaagent:C:\\apache-skywalking\\agent\\skywalking-agent.jar -Dskywalking.agent.service_name=iscp-nacos -Dskywalking.collector.backend_service=localhost:11800 -jar iscp-nacos-0.0.1-SNAPSHOT.jar
