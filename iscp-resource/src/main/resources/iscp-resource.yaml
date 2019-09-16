@@ -1,0 +1,26 @@
+server:
+   port: 9104
+spring:
+   application:
+      name: demo-consumer
+   cloud:
+      nacos:
+         discovery:
+            server-addr: 127.0.0.1:8848
+            namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+auth-server: http://localhost:9103
+security:
+   oauth2:
+      client:
+         client-id: client1
+         client-secret: 123456
+#         scope: app
+         access-token-uri: ${auth-server}/oauth/token # 获取access token接口
+         user-authorization-uri: ${auth-server}/oauth/authorize #  获取Authorization Code接口
+      resource:
+         token-info-uri: ${auth-server}/oauth/check_token # 验证token的接口
