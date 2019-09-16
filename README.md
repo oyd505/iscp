@@ -33,6 +33,10 @@
 * 2、使用alibaba-sentinel做限流控制
 * 3、使用alibaba-nacos存储服务限流规则
 * 4、使用SkyWalking实现分布式追踪
+>### [iscp-authserver项目](https://github.com/oyd505/iscp/tree/master/iscp-authserver)
+* 1、使用spring-cloud-oauth2实现认证服务器
+>### [iscp-resource项目](https://github.com/oyd505/iscp/tree/master/iscp-resource)
+* 1、使用spring-cloud-oauth2实现资源服务器
 
 ## 注意事项
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）
