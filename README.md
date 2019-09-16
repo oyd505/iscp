@@ -22,21 +22,21 @@
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)
 * 1、使用alibaba-nacos管理服务
 * 2、使用alibaba-nacos管理配置文件
-* 3、使用SkyWalking实现分布式追踪
+* 3、使用SkyWalking实现分布式追踪  
 >### [iscp-feign-sentinel项目](https://github.com/oyd505/iscp/tree/master/iscp-feign-sentinel)
 * 1、使用openfeign声明式调用下游服务
 * 2、使用alibaba-sentinel做熔断降级控制
 * 3、使用alibaba-nacos存储服务降级规则
-* 4、使用SkyWalking实现分布式追踪
+* 4、使用SkyWalking实现分布式追踪  
 >### [iscp-gateway-sentinel项目](https://github.com/oyd505/iscp/tree/master/iscp-gateway-sentinel)
 * 1、使用spring-cloud-gateway做api网关
 * 2、使用alibaba-sentinel做限流控制
 * 3、使用alibaba-nacos存储服务限流规则
-* 4、使用SkyWalking实现分布式追踪
+* 4、使用SkyWalking实现分布式追踪  
 >### [iscp-authserver项目](https://github.com/oyd505/iscp/tree/master/iscp-authserver)
-* 1、使用spring-cloud-oauth2实现认证服务器
+* 1、使用spring-cloud-oauth2实现认证服务器  
 >### [iscp-resource项目](https://github.com/oyd505/iscp/tree/master/iscp-resource)
-* 1、使用spring-cloud-oauth2实现资源服务器
+* 1、使用spring-cloud-oauth2实现资源服务器  
 
 ## 测试
 * 获取token
