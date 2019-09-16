@@ -38,6 +38,16 @@
 >### [iscp-resource项目](https://github.com/oyd505/iscp/tree/master/iscp-resource)
 * 1、使用spring-cloud-oauth2实现资源服务器
 
+## 测试
+* 获取token
+>> Grant Type: Authorization Code  
+>> Callback URL: http://127.0.0.1:9005/login  
+>> Auth URL: http://localhost:9103/oauth/authorize  
+>> Access Token URL: http://localhost:9103/oauth/token  
+>> Client ID: client1  
+>> Client Secret: 123456
+
+
 ## 注意事项
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）
 * 2、使用监控spring-cloud-gateway,需要将apm-spring-cloud-gateway-2.x-plugin-6.3.0.jar插件从optional-plugins目录移到plugins目录,否则traceId不传递
