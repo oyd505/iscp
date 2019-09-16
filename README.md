@@ -40,4 +40,6 @@
 
 ## 参考资料
 * 1、[spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba)
-* 2、[skywalking](http://skywalking.apache.org/)
+* 2、[Nacos](https://nacos.io/zh-cn/)
+* 3、[Sentinel](https://github.com/alibaba/Sentinel)
+* 4、[SkyWalking](http://skywalking.apache.org/)
