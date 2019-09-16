@@ -7,6 +7,7 @@
 * 3、spring-cloud-alibaba使用2.1.0.RELEASE
 * 4、nacos-server使用1.1.3
 * 5、sentinel-dashboard使用1.6.3
+* 6、apache-skywalking-apm使用6.3.0
 
 ## 项目模块介绍
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)
