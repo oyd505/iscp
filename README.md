@@ -39,7 +39,8 @@
 * 2、使用监控spring-cloud-gateway,需要将apm-spring-cloud-gateway-2.x-plugin-6.3.0.jar插件从optional-plugins目录移到plugins目录,否则traceId不传递
 
 ## 参考资料
-* 1、[spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba)
-* 2、[Nacos](https://nacos.io/zh-cn/)
-* 3、[Sentinel](https://github.com/alibaba/Sentinel)
-* 4、[SkyWalking](http://skywalking.apache.org/)
+* 1、[spring-cloud](https://spring.io/projects/spring-cloud)、[Spring Cloud中文网](https://www.springcloud.cc/)、[Spring Cloud中国社区](http://springcloud.cn/)
+* 2、[spring-cloud-alibaba](https://github.com/alibaba/spring-cloud-alibaba)
+* 3、[Nacos](https://nacos.io/zh-cn/)
+* 4、[Sentinel](https://github.com/alibaba/Sentinel)
+* 5、[SkyWalking](http://skywalking.apache.org/)
