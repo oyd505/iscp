@@ -35,7 +35,6 @@
 * 1、使用spring-cloud-gateway做api网关  
 * 2、使用alibaba-sentinel做限流控制  
 * 3、使用alibaba-nacos存储服务限流规则  
-* 4、使用SkyWalking实现分布式追踪  
 
 >### [iscp-authserver项目](https://github.com/oyd505/iscp/tree/master/iscp-authserver)  
 * 同上iscp-nacos项目  
