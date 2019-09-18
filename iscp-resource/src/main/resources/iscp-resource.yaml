@@ -2,7 +2,7 @@ server:
    port: 9104
 spring:
    application:
-      name: demo-consumer
+      name: iscp-resource
    cloud:
       nacos:
          discovery:
