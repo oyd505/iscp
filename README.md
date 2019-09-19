@@ -1,5 +1,5 @@
 # iscp  
-微服务脚手架  
+微服务脚手架，相关技术spring-cloud、spring-cloud-alibaba、nacos、sentinel、skywalking  
 
 ## 相关依赖框架  
 * 1、spring-boot使用2.1.6.RELEASE  
