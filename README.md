@@ -60,7 +60,7 @@
 * 访问资源  
 >> url: http://localhost:9104/info/user  
 >> headers: Authorization:Bearer 894fc69f-6a60-4cff-b762-374db6c0e033  
-* 访问、同步与管理接口
+* 访问、同步与管理接口  
 >> swagger界面url： http://localhost:9105/swagger-ui.html  
 >> swagger数据url: http://localhost:9105/v2/api-docs  
 >> yapi管理url: http://localhost:3000  
