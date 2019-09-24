@@ -61,9 +61,9 @@
 >> url: http://localhost:9104/info/user  
 >> headers: Authorization:Bearer 894fc69f-6a60-4cff-b762-374db6c0e033  
 * 访问、同步与管理接口
->> swagger界面url： http://localhost:9105/swagger-ui.html
->> swagger数据url: http://localhost:9105/v2/api-docs
->> yapi管理url: http://localhost:3000
+>> swagger界面url： http://localhost:9105/swagger-ui.html  
+>> swagger数据url: http://localhost:9105/v2/api-docs  
+>> yapi管理url: http://localhost:3000  
 
 ## 注意事项  
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）  
