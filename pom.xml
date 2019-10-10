@@ -116,5 +116,7 @@
     <module>iscp-authserver</module>
     <module>iscp-resource</module>
     <module>iscp-swagger</module>
+    <module>iscp-kafka</module>
+    <module>iscp-stream</module>
   </modules>
 </project>

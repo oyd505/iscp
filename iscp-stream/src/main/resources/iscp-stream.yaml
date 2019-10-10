@@ -1,0 +1,34 @@
+server:
+   port: 9107
+spring:
+   application:
+      name: iscp-stream
+   cloud:
+      nacos:
+         discovery:
+            server-addr: 127.0.0.1:8848
+            namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
+      stream:
+         bindings:
+            demo_input:
+               destination: demo
+            demo_output:
+               destination: demo
+         default-binder: kafka
+   kafka:
+      bootstrap-servers: localhost:9092
+      consumer:
+         group-id: consumer1
+      producer:
+         key-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+         value-serializer: org.apache.kafka.common.serialization.ByteArraySerializer
+         client-id: producer1
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+logging:
+   level:
+      root: INFO
+      com.island.iscp.stream: DEBUG
