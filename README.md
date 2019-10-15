@@ -28,6 +28,12 @@
 >>> pm2 info yapi //查看服务信息  
 >>> pm2 stop yapi //停止服务  
 >>> pm2 restart yapi //重启服务  
+* 8、zookeeper使用3.5.5  
+>> 启动zookeeper  
+>>> cmd，输入“zkServer“，运行Zookeeper  
+* 9、Kafka使用2.12-2.3.0  
+>> 启动Kafka  
+>>> Kafka安装目录下执行.\bin\windows\kafka-server-start.bat .\config\server.properties  
 
 ## 项目模块介绍  
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)  
