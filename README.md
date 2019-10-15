@@ -60,6 +60,14 @@
 * 1、使用swagger2生成接口数据  
 * 2、使用yapi自动同步swagger数据管理接口  
 
+>### [iscp-kafka项目](https://github.com/oyd505/iscp/tree/master/iscp-kafka)  
+* 同上iscp-nacos项目  
+* 1、使用spring-kafka发布和订阅消息  
+
+>### [iscp-stream项目](https://github.com/oyd505/iscp/tree/master/iscp-stream)  
+* 同上iscp-nacos项目  
+* 1、使用spring-cloud-stream发布和订阅消息  
+
 ## 测试  
 * 获取token  
 >> Grant Type: Authorization Code  
