@@ -1,0 +1,40 @@
+server:
+   port: 9106
+spring:
+   application:
+      name: iscp-kafka
+   cloud:
+      nacos:
+         discovery:
+            server-addr: 127.0.0.1:8848
+            namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
+   kafka:
+      listener:
+         ack-mode: batch
+         poll-timeout: 30000
+      template:
+         default-topic: topic
+      consumer:
+         group-id: consumer1
+         auto-offset-reset: latest
+         enable-auto-commit: true
+         max-poll-records: 500
+         auto-commit-interval: 30000
+         key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+         value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+         properties:
+            isolation:
+               level: read_committed
+      producer:
+         retries: 2
+         key-serializer: org.apache.kafka.common.serialization.StringSerializer
+         value-serializer: org.apache.kafka.common.serialization.StringSerializer
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+logging:
+   level:
+      root: INFO
+      com.island.iscp.kafka: DEBUG
