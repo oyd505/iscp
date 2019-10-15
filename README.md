@@ -21,6 +21,13 @@
 >> yapi安装  
 >>> npm install -g yapi-cli --registry https://registry.npm.taobao.org  
 >>> yapi server  
+>> 服务管理  
+>>> npm install pm2 -g  //安装pm2  
+>>> cd  {项目目录}  
+>>> pm2 start "vendors/server/app.js" --name yapi //pm2管理yapi服务  
+>>> pm2 info yapi //查看服务信息  
+>>> pm2 stop yapi //停止服务  
+>>> pm2 restart yapi //重启服务  
 
 ## 项目模块介绍  
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)  
