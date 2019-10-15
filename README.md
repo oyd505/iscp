@@ -17,6 +17,10 @@
 >>>      -Dskywalking.agent.service_name=服务名字 (如：demo-consumer)  
 >>>      -Dskywalking.collector.backend_service=skywalking服务地址与端口 (如：127.0.0.1:11800)  
 >>>      -jar 项目jar包 (如：iscp-nacos-0.0.1-SNAPSHOT.jar)  
+* 7、yapi使用1.83  
+>> yapi安装  
+>>> npm install -g yapi-cli --registry https://registry.npm.taobao.org  
+>>> yapi server  
 
 ## 项目模块介绍  
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)  
