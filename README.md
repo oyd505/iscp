@@ -88,7 +88,7 @@
 * 访问、同步与管理接口  
 >> swagger界面url： http://localhost:9105/swagger-ui.html  
 >> swagger数据url: http://localhost:9105/v2/api-docs  
->> yapi管理url: http://localhost:3000  
+>> yapi管理url: http://localhost:3000（默认密码为 ymfe.org）  
 
 ## 注意事项  
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）  
@@ -102,4 +102,6 @@
 * 3、[Nacos](https://nacos.io/zh-cn/)  
 * 4、[Sentinel](https://github.com/alibaba/Sentinel)  
 * 5、[SkyWalking](http://skywalking.apache.org/)、[OpenTracing文档中文版](https://wu-sheng.gitbooks.io/opentracing-io/content/)  
-* 6、[YApi](https://github.com/YMFE/yapi)
+* 6、[YApi](https://github.com/YMFE/yapi)  
+* 7、[zookeeper](http://zookeeper.apache.org)  
+* 8、[kafka](http://kafka.apache.org)  
