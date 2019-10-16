@@ -85,6 +85,12 @@
 * 同上iscp-nacos项目  
 * 1、使用spring-cloud-stream发布和订阅消息  
 
+>### [iscp-elk项目](https://github.com/oyd505/iscp/tree/master/iscp-elk)  
+* 同上iscp-nacos项目  
+* 1、使用kafka、logstash采集日志  
+* 2、使用elasticsearch存储日志  
+* 3、使用kibana展示日志
+
 ## 测试  
 * 获取token  
 >> Grant Type: Authorization Code  
