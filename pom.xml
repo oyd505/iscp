@@ -118,5 +118,6 @@
     <module>iscp-swagger</module>
     <module>iscp-kafka</module>
     <module>iscp-stream</module>
+    <module>iscp-elk</module>
   </modules>
 </project>

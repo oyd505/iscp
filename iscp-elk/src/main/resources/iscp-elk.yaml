@@ -1,0 +1,19 @@
+server:
+   port: 9108
+spring:
+   application:
+      name: iscp-elk
+   cloud:
+      nacos:
+         discovery:
+            server-addr: 127.0.0.1:8848
+            namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
+management:
+   endpoints:
+      web:
+         exposure:
+            include: '*'
+logging:
+   level:
+      root: INFO
+      com.island.iscp.elk: DEBUG

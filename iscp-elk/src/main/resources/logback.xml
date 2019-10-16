@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration>
+<configuration>
+	<springProperty scope="context" name="appname"
+		source="spring.application.name" />
+
+	<!-- <appender name="LOGSTASH" -->
+	<!-- class="net.logstash.logback.appender.LogstashTcpSocketAppender"> -->
+	<!-- <destination>localhost:4560</destination> -->
+	<!-- <encoder -->
+	<!-- class="ch.qos.logback.core.encoder.LayoutWrappingEncoder"> -->
+	<!-- <layout -->
+	<!-- class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout"> -->
+	<!-- <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%tid] ${appname:-} [%thread] -->
+	<!-- %-5level %logger - %msg%n</pattern> -->
+	<!-- </layout> -->
+	<!-- <charset>UTF-8</charset> -->
+	<!-- </encoder> -->
+
+	<!-- <encoder charset="UTF-8" -->
+	<!-- class="net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder"> -->
+	<!-- <providers> -->
+	<!-- <timestamp> -->
+	<!-- <timeZone>UTC</timeZone> -->
+	<!-- </timestamp> -->
+	<!-- <pattern> -->
+	<!-- <pattern> -->
+	<!-- { -->
+	<!-- "logLevel": "%level", -->
+	<!-- "serviceName": "${appname:-}", -->
+	<!-- "pid": "${PID:-}", -->
+	<!-- "thread": "%thread", -->
+	<!-- "class": "%logger{40}", -->
+	<!-- "rest": "%message" -->
+	<!-- } -->
+	<!-- </pattern> -->
+	<!-- </pattern> -->
+	<!-- </providers> -->
+	<!-- </encoder> -->
+	<!-- </appender> -->
+
+	<appender name="STDOUT"
+		class="ch.qos.logback.core.ConsoleAppender">
+		<encoder
+			class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout
+				class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%tid] ${appname:-} [%thread]
+					%-5level %logger - %msg%n</pattern>
+			</layout>
+			<!-- <charset>UTF-8</charset> -->
+		</encoder>
+	</appender>
+
+	<!-- <include -->
+	<!-- resource="org/springframework/boot/logging/logback/base.xml" /> -->
+
+	<appender name="diy-kafka-appender"
+		class="com.github.danielwegener.logback.kafka.KafkaAppender">
+		<encoder
+			class="ch.qos.logback.core.encoder.LayoutWrappingEncoder">
+			<layout
+				class="org.apache.skywalking.apm.toolkit.log.logback.v1.x.TraceIdPatternLogbackLayout">
+				<pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%tid] ${appname:-} [%thread] %-5level %logger - %msg%n</pattern>
+			</layout>
+			<charset>UTF-8</charset>
+		</encoder>
+
+		<!-- 指定推送到的kafka topic -->
+		<topic>all_logs</topic>
+		<!-- ensure that every message sent by the executing host is partitioned 
+			to the same partition strategy -->
+		<keyingStrategy
+			class="com.github.danielwegener.logback.kafka.keying.HostNameKeyingStrategy" />
+		<!-- block the logging application thread if the kafka appender cannot 
+			keep up with sending the log messages -->
+		<deliveryStrategy
+			class="com.github.danielwegener.logback.kafka.delivery.BlockingDeliveryStrategy">
+			<!--在确认kafka可用前无限等待 -->
+			<timeout>0</timeout>
+		</deliveryStrategy>
+		<!-- 指定Kafka的地址 -->
+		<producerConfig>bootstrap.servers=localhost:9092</producerConfig>
+		<!-- <producerConfig>bootstrap.servers=kafka1:9092,kafka2:9093,kafka3:9094</producerConfig> -->
+		<!-- 限制缓冲区内存，默认32M -->
+		<producerConfig>buffer.memory=8388608</producerConfig>
+		<!-- 定义client.id -->
+		<producerConfig>client.id=${HOSTNAME}-${CONTEXT_NAME}-logback-restrictive</producerConfig>
+		<!-- 使用gzip打包压缩日志发送，可用压缩类型: none, gzip, snappy -->
+		<producerConfig>compression.type=gzip</producerConfig>
+	</appender>
+
+	<root level="INFO">
+		<!-- <appender-ref ref="LOGSTASH" /> -->
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="diy-kafka-appender" />
+	</root>
+
+</configuration>
