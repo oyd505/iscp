@@ -89,7 +89,7 @@
 * 同上iscp-nacos项目  
 * 1、使用kafka、logstash采集日志  
 * 2、使用elasticsearch存储日志  
-* 3、使用kibana展示日志
+* 3、使用kibana展示日志  
 
 ## 测试  
 * 获取token  
@@ -112,6 +112,7 @@
 * 2、使用监控spring-cloud-gateway,需要将apm-spring-cloud-gateway-2.x-plugin-6.3.0.jar插件从optional-plugins目录移到plugins目录,否则traceId不传递  
 * 3、单机测试时，认证服务器redirectUris一定要写成127.0.0.1，确保认证服务器和sso客户端不同域名，防止浏览器使用同一个cookie导致页面一直再login页重定向  
 * 4、如果pom.xml文件第一行报错 Unknown Error，在pom中的properties里加上 <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>就可以了  
+* 5、日志中使用SkyWalking的apm-toolkit-logback-1.x增加TraceId，使用ConsoleAppender和KafkaAppender都能正确获取TraceId，但使用LogstashTcpSocketAppender获取不到TraceId  
 
 ## 参考资料  
 * 1、[spring-cloud](https://spring.io/projects/spring-cloud)、[Spring Cloud中文网](https://www.springcloud.cc/)、[Spring Cloud中国社区](http://springcloud.cn/)  
