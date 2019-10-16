@@ -34,6 +34,17 @@
 * 9、Kafka使用2.12-2.3.0  
 >> 启动Kafka  
 >>> Kafka安装目录下执行.\bin\windows\kafka-server-start.bat .\config\server.properties  
+* 10、ElasticSearch使用7.4.0  
+>> 注册windows服务  
+>>> elasticsearch-service.bat install  
+>>> elasticsearch-service.bat manager  
+* 11、LogStash使用7.4.0  
+>> 启动LogStash  
+>>> cd C:\elk\logstash-7.4.0  
+>>> .\bin\logstash -f config\logstash-kafka.conf  
+* 12、Kibana使用7.4.0  
+>> 启动Kibana  
+>>> 双击kibana.bat启动  
 
 ## 项目模块介绍  
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)  
