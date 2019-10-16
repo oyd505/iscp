@@ -106,6 +106,15 @@
 >> swagger界面url： http://localhost:9105/swagger-ui.html  
 >> swagger数据url: http://localhost:9105/v2/api-docs  
 >> yapi管理url: http://localhost:3000（默认密码为 ymfe.org）  
+* ELK收集处理日志  
+>> cmd输入“zkServer“，运行Zookeeper  
+>> 运行.\bin\windows\kafka-server-start.bat .\config\server.properties启动kafka  
+>> 启动ElasticSearch服务  
+>> 运行logstash -f ..\config\logstash-kafka.conf启动LogStash  
+>> 双击kibana.bat启动Kibana  
+>> 浏览器访问http://localhost:5601管理Kibana  
+>> Kibana的Management页面创建Index Patterns  
+>> Kibana的Discover页面搜索日志数据  
 
 ## 注意事项  
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）  
