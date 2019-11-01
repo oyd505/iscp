@@ -115,6 +115,11 @@
 >> 浏览器访问http://localhost:5601管理Kibana  
 >> Kibana的Management页面创建Index Patterns  
 >> Kibana的Discover页面搜索日志数据  
+* 构建docker镜像  
+>> 前提条件：windows系统安装好docker环境并与PowerShell建立链接（docker-machine env default | Invoke-Expression）  
+>> 项目中编写Dockerfile文件  
+>> 项目环境下执行如下命令（mvn dockerfile:build）  
+>> 执行docker images命令查看docker镜像  
 
 ## 注意事项  
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）  
