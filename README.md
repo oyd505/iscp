@@ -1,5 +1,5 @@
 # iscp  
-微服务脚手架，相关技术spring-cloud、spring-cloud-alibaba、nacos、sentinel、skywalking、swagger2、yapi、ELK(ElasticSearch + LogStash + Kibana)  
+微服务脚手架，相关技术spring-cloud、spring-cloud-alibaba、nacos、sentinel、skywalking、swagger2、yapi、ELK(ElasticSearch + LogStash + Kibana)、docker、k8s  
 
 ## 相关依赖框架  
 * 1、spring-boot使用2.1.6.RELEASE  
@@ -45,6 +45,20 @@
 * 12、Kibana使用7.4.0  
 >> 启动Kibana  
 >>> 双击kibana.bat启动  
+* 13、DockerToolbox使用19.03.1  
+>> 搭建docker环境  
+>>> 创建docker虚拟机：docker-machine create --driver virtualbox --virtualbox-boot2docker-url=/Users/Administrator/.docker/machine/cache/boot2docker.iso  default  
+>>> 启动docker虚拟机：docker-machine start default  
+>>> 进入docker虚拟机：docker-machine ssh default  
+>>> 停止docker虚拟机：docker-machine stop default  
+>> 搭建docker私服  
+>>> 拉取registry镜像：docker pull docker.io/registry  
+>>> 启动registry：docker run -d -p 5000:5000 --name=registry --restart=always --privileged=true  --log-driver=none -v /home/data/registrydata:/tmp/registry registry  
+* 14、minikube使用1.16.0  
+>> 启动：minikube start --image-mirror-country=cn --registry-mirror=https://***.mirror.aliyuncs.com --insecure-registry=192.168.99.103:5000 --kubernetes-version v1.16.0  
+>> 进入minikube虚拟机：minikube ssh  
+>> 打开Kubernetes控制台:minikube dashboard
+>> 停止：minikube stop  
 
 ## 项目模块介绍  
 >### [iscp-nacos项目](https://github.com/oyd505/iscp/tree/master/iscp-nacos)  
