@@ -148,6 +148,8 @@
 * 3、单机测试时，认证服务器redirectUris一定要写成127.0.0.1，确保认证服务器和sso客户端不同域名，防止浏览器使用同一个cookie导致页面一直再login页重定向  
 * 4、如果pom.xml文件第一行报错 Unknown Error，在pom中的properties里加上 <maven-jar-plugin.version>3.1.1</maven-jar-plugin.version>就可以了  
 * 5、日志中使用SkyWalking的apm-toolkit-logback-1.x增加TraceId，使用ConsoleAppender和KafkaAppender都能正确获取TraceId，但使用LogstashTcpSocketAppender获取不到TraceId  
+* 6、docker与k8s环境都需要配置镜像加速registry-mirror  
+* 7、virtualbox虚拟机在host-only网络环境下如果需要访问宿主机，需关闭宿主机防火墙  
 
 ## 参考资料  
 * 1、[spring-cloud](https://spring.io/projects/spring-cloud)、[Spring Cloud中文网](https://www.springcloud.cc/)、[Spring Cloud中国社区](http://springcloud.cn/)  
