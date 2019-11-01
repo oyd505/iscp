@@ -115,11 +115,18 @@
 >> 浏览器访问http://localhost:5601管理Kibana  
 >> Kibana的Management页面创建Index Patterns  
 >> Kibana的Discover页面搜索日志数据  
-* 构建docker镜像  
+* 构建、运行docker镜像  
 >> 前提条件：windows系统安装好docker环境并与PowerShell建立链接（docker-machine env default | Invoke-Expression）  
 >> 项目中编写Dockerfile文件  
 >> 项目环境下执行如下命令（mvn dockerfile:build）  
 >> 执行docker images命令查看docker镜像  
+>> 运行docker镜像：docker run -idt -p 9100:9100 --name iscp-nacos 192.168.99.103:5000/iscp-nacos:0.0.1-SNAPSHOT  
+>> 进入docker镜像内部：docker exec -it iscp-nacos /bin/sh  
+* minikube运行应用    
+>> 前提条件：搭建docker registry和minikube环境  
+>> 编写iscp-nacos.yaml脚本并执行命令kubectl create -f iscp-nacos.yaml创建pod  
+>> 执行kubectl get pods查看pod  
+>> 使用kubectl port-forward iscp-nacos-pod 9100:9100实现pod端口临时转发  
 
 ## 注意事项  
 * 1、namespase如果不是public，需要配置对应的命名空间ID（如：c6ef4ed4-1a37-4672-a8dc-53926e8e9b49）  
