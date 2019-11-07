@@ -1,0 +1,41 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: iscp-nacos
+  labels:
+    name: iscp-nacos
+spec:
+  replicas: 2
+  selector:
+    name: iscp-nacos
+  template:
+    metadata:
+      labels:
+        name: iscp-nacos
+    spec:
+      containers:
+      - name: iscp-nacos
+        image: 192.168.99.103:5000/iscp-nacos:0.0.1-SNAPSHOT
+        ports:
+        - containerPort: 9100
+        volumeMounts:
+        - name: agent
+          mountPath: /agent
+      volumes:
+      - name: agent
+        hostPath:
+          path: /agent
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iscp-nacos
+  labels:
+    name: iscp-nacos
+spec:
+  ports:
+  - port: 9100
+    targetPort: 9100
+  type: NodePort
+  selector:
+    name: iscp-nacos

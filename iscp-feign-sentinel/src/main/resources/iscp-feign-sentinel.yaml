@@ -6,18 +6,18 @@ spring:
    cloud:
       nacos:
          discovery:
-            server-addr: 127.0.0.1:8848
+            server-addr: 192.168.99.1:8848
             namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
       sentinel:
          datasource.ds1.nacos:
-            server-addr: 127.0.0.1:8848
+            server-addr: 192.168.99.1:8848
             namespace: c6ef4ed4-1a37-4672-a8dc-53926e8e9b49
             data-id: iscp-feign-sentinel
             group-id: DEFAULT_GROUP
             data-type: json
             ruleType: degrade
          transport:
-            dashboard: localhost:28080
+            dashboard: 192.168.99.1:28080
 management:
    endpoints:
       web:

@@ -19,6 +19,7 @@ public class TestController {
 
 	@GetMapping("/sleep")
 	public String sleep(int factor) throws InterruptedException {
+		log.debug("sleep method of TestController, factor: {}", factor);
 		long millis = 10000 / factor;
 		Thread.sleep(millis);
 		return "sleep: " + millis;
